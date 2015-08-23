@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fish type:</b>
+  <%= @catch.fish_type_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @catch.user_id %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%= @catch.lat %>
+</p>
+
+<p>
+  <b>Lon:</b>
+  <%= @catch.lon %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @catch.date %>
+</p>
+
+<p>
+  <b>Kept:</b>
+  <%= @catch.kept %>
+</p>
+
+
+<%= link_to 'Edit', edit_catch_path(@catch) %> |
+<%= link_to 'Back', catches_path %>

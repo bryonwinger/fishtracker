@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @fish_type.name %>
+</p>
+
+<p>
+  <b>Display weight:</b>
+  <%= @fish_type.display_weight %>
+</p>
+
+
+<%= link_to 'Edit', edit_fish_type_path(@fish_type) %> |
+<%= link_to 'Back', fish_types_path %>

@@ -1,0 +1,23 @@
+<h1>GOIN FISHIN!</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <% @fish_types.each do |fish_type| %>
+      <th><%= fish_type.name %></th>
+    <% end %>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.nickname %></td>
+    <% @fish_types.each do |fish_type| %>
+      <td onClick="window.alert('add <%= fish_type.name %> to <%= user.nickname %>')" ></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Catch', new_catch_path %>
