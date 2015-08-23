@@ -2,5 +2,5 @@
 
 * Clone this from git
 * run
-``` rails s
+    rails s
 * go to localhost:3000
