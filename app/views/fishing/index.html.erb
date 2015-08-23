@@ -10,9 +10,9 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.nickname %></td>
+    <td style="min-width:50px"><%= user.nickname %></td>
     <% @fish_types.each do |fish_type| %>
-      <td onClick="window.alert('add <%= fish_type.name %> to <%= user.nickname %>')" ></td>
+      <td class="fish" onClick="window.alert('add <%= fish_type.name %> to <%= user.nickname %>')" ></td>
     <% end %>
   </tr>
 <% end %>
