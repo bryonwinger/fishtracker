@@ -15,6 +15,11 @@ class FishingController < ApplicationController
 
   def catch
     @notice_string = User.find(params[:user_id]).nickname + " caught a " + FishType.find(params[:fish_type_id]).name
+    Catch.create!(
+      user_id: params[:user_id],
+      fish_type_id: params[:fish_type_id],
+      date: Time.now,
+    )
     redirect_to({action: "index"}, alert: @notice_string.html_safe)
   end
 
