@@ -1,5 +1,7 @@
 <h1>GOIN FISHIN!</h1>
 
+<p id="notice"><%= notice %></p>
+
 <table>
   <tr>
     <th></th>
@@ -12,7 +14,7 @@
   <tr>
     <td style="min-width:50px"><%= user.nickname %></td>
     <% @fish_types.each do |fish_type| %>
-      <td class="fish" onClick="window.alert('add <%= fish_type.name %> to <%= user.nickname %>')" ></td>
+      <td class="fish" onClick="window.location.href = '/fishing/catch?fish_type_id=<%= fish_type.id %>&user_id=<%= user.id %>'" ></td>
     <% end %>
   </tr>
 <% end %>

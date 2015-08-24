@@ -6,6 +6,8 @@ Fishtracker::Application.routes.draw do
 
 
   resources :users
+
+  match 'fishing/catch' => 'fishing#catch'
   resources :fishing
 
 
