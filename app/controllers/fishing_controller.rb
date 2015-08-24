@@ -3,20 +3,20 @@ class FishingController < ApplicationController
   # GET /fishing.json
   def index
 
-    flash.keep(:notice)
     @catches = Catch.all
     @users = User.all
     @fish_types = FishType.all
 
-
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @catches }
     end
   end
 
   def catch
-    redirect_to action: 'index', notice: 'stuff to go here'
+    @notice_string = User.find(params[:user_id]).nickname + " caught a " + FishType.find(params[:fish_type_id]).name
+    redirect_to({action: "index"}, alert: @notice_string.html_safe)
   end
+
 
 end
